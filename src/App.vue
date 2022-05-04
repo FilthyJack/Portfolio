@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Ashim's Vue.js App"/>
+    <base-wrapper></base-wrapper>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import memeToast from 'meme-toast';
+import BaseWrapper from './components/BaseWrapper.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BaseWrapper
+  },
+  mounted(){
+    memeToast.toast({position: 'top-right'});
   }
 }
 </script>

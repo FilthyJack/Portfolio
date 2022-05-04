@@ -1,15 +1,18 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>An update to check.</h2>
+    <color-pick></color-pick>
   </div>
 </template>
 
 <script>
+import ColorPick from './showcase/ColorPick.vue';
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components:{
+    ColorPick
   }
 }
 </script>

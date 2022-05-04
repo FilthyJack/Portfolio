@@ -1,0 +1,65 @@
+{
+    "name": "Ashim Khan",
+    "title": "Frontend Developer",
+    "subtitle": "Cat Dad",
+    "photo":"",
+    "experience": [
+      {
+        "company": "Enterprise Minds",
+        "roles": [
+          {
+            "role": "Frontend Engineer",
+            "duration": "2021 Present",
+            "stack": ["Vue", "Javascript", "Jest", "Nodejs"]
+          }
+        ]
+      },
+      {
+        "company": "Dassault Systemes",
+        "roles": [
+          {
+            "role": "R&D Dev Specialist",
+            "duration": "2020 to 2021",
+            "stack": ["React", "Javascript", "Jasmine", "Nodejs"]
+          },
+          {
+            "role": "R&D Dev Engineer",
+            "duration": "2019 to 2020",
+            "stack": ["React", "C++", "Javascript", "Nodejs"]
+          }
+        ]
+      }
+    ],
+    "tools":["Git", "CI/CD", "Sonar"],
+    "education": {
+      "college": "NIT Raipur",
+      "department": "Engineering",
+      "duration": "2015 to 2019"
+    },
+    "contact": {
+      "email": "ashim07khan@gmail.com",
+      "phone": "7000243640"
+    },
+    "skills":[
+      {
+        "name": "Javascript",
+        "rating": "great"
+      },
+      {
+        "name": "Vue",
+        "rating": "average"
+      },
+      {
+        "name": "React",
+        "rating": "average"
+      },
+      {
+        "name": "Teamwork",
+        "rating": "good"
+      },
+      {
+        "name": "Tools",
+        "rating": "average"
+      }
+    ]
+  }
