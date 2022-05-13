@@ -1,36 +1,45 @@
 <template>
-  <base-wrapper>
-    <slot>
+    <section>
         <div class="showcase-main-container">
             <div @click="selectColor" class="item-container">
                 <p>color Picker</p>
+            </div>
+            <div @click="selectList" class="item-container">
+                <p>List Picker</p>
             </div>
         </div>
         <div class="colorpicker" v-if="showColor">
             <color-pick></color-pick>
         </div>
-    </slot>
-  </base-wrapper>
+        <div class="colorpicker" v-if="showList">
+            <List></List>
+        </div>
+    </section>
 </template>
 
 <script lang="typescript">
-import BaseWrapper from './../BaseWrapper.vue';
 import ColorPick from './ColorPick.vue';
+import List from './List.vue';
 export default {
     name: 'showcase-component',
     components: {
-        BaseWrapper,
-        ColorPick
+        ColorPick,
+        List
     },
     data() {
         return {
             showColor: false,
+            showList: false
         }
     },
     methods:{
         selectColor(){
             this.$data.showColor = true;
+        },
+        selectList(){
+            this.$data.showList = true;
         }
+
     }
 
 }

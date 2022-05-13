@@ -5,3 +5,7 @@ body {
 .color-pick-active {
     background-color: brown;
 }
+
+.material-design-icon__svg{
+    margin-top: 15px;
+}

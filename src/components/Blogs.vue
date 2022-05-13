@@ -1,22 +1,16 @@
 <template>
-  <base-wrapper>
-    <slot>
         <div class="blog-main-container">
             <div class="blog-container" v-for="link in linkList" :key="link.id">
                 <h3>{{link.title}}</h3>
                 <p>{{link.subtitle}}</p>
             </div>
         </div>
-    </slot>
-  </base-wrapper>
 </template>
 
 <script>
-import BaseWrapper from './BaseWrapper.vue';
 export default {
     name: 'blog-component',
     components: {
-        BaseWrapper,
     },
     data() {
         return {

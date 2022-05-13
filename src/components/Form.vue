@@ -1,15 +1,13 @@
 <template>
-  <base-wrapper>
-    <slot>
         <div class="form-main-container">
             <h3 class="form-title">Leave a Note!</h3>
-            <p class="form-subtitle">I promise I will read it, maybe.</p>
+            <p class="form-subtitle">I promise I will read it, (maybe)</p>
             <form @submit.prevent="sendResponse" class="form-container">
-                <label for="name">What is your name fellow human ?<span class="imp">*</span>
-                    <input v-model="name" type="text" id="name" required>
-                </label>
-                <br>
-                <label for="phone">Give me your number if you wanna...
+                    <label for="name">Your name please!<span class="imp">*</span>
+                        <input v-model="name" type="text" id="name" required>
+                    </label>
+                    <br />
+                <label for="phone">Your Phone Number?
                     <input type="text" id="phone">
                 </label>
                 <br>
@@ -18,12 +16,18 @@
                 </label>
                 <br>
                 <label for="comments">Anything you wanna jot down real quick ?
-                    <textarea rows="5" type="textfield" id="comments"></textarea>
+                    <textarea rows="4" type="textfield" id="comments"></textarea>
                 </label>
                 <br />
                 <input v-model="disclaimer" type="checkbox" id="disclaimer" name="disclaimer" value="disclaimer" required>
-                <label class="dis-label" for="disclaimer">I promise to help atleast one person today. <span class="imp">*</span></label><br>
-                <button @click="sendResponse" :disabled="isDisabled" class="submit">I'm Done!</button>       
+                <label class="dis-label" for="disclaimer">
+                    I promise to help atleast one person today.
+                </label>
+                <br>
+                <div class='button-div'>
+                    <Button size="small" text="Add Note" @button-click="sendResponse" :disabled="isDisabled"></Button>
+                </div>
+                      
             </form>
             <div v-if="isToastVisible" class="toast">
                 <p class="toast-text">
@@ -31,16 +35,14 @@
                 </p>
             </div>
         </div>
-    </slot>
-  </base-wrapper>
 </template>
 
 <script>
-import BaseWrapper from './BaseWrapper.vue';
+import Button from './UI/Button.vue';
 export default {
     name: 'form-component',
     components: {
-        BaseWrapper,
+        Button
     },
     mounted() {
         const visitorName = localStorage.getItem('visitor');
@@ -84,21 +86,70 @@ export default {
 <style lang="scss" scoped>
 .form-main-container {
     @media(min-width: 500px) {
+        .form-subtitle{
+            display: contents;
+        }
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 700px;
         padding: 10px;
+                background: rgb(29,253,246);
+        background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
         .form-container {
             width: 300px;
             padding: 7px;
-            box-shadow: 2px 4px 4px 2px grey;
             margin-bottom: 20px;
+            margin-top: 20px;
             &:nth-child(even) {
                 align-self: end;
             }
         }
+        h3,p, label{
+            color: white;
+        }
+        label{
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        input, textarea{
+            -webkit-appearance: none;
+            outline: none;
+            padding: 5px;
+            font-size: 20px;
+            color: white;   
+            border:none;
+            background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+            margin: 10px 0 20px 0;
+            border-radius: 20px;
+            &:active{
+                border-bottom: 3px outset cyan;
+            }
+            &:focus{
+                border-bottom: 3px outset cyan;
+            }
+        }
+        textarea{
+            font-size: 14px;
+            width: 245px;
+        }
+        #disclaimer{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            &:active{
+                border-bottom: none;
+            }
+            &:focus{
+                border-bottom: none;
+            }
+            &:checked {
+                background: forestgreen; 
+                 border: 3px outset cyan;             
+            }
+        }
     }
+
     .toast {
         position: absolute;
         top:100px;
@@ -106,6 +157,21 @@ export default {
         border: 3px solid black;
         padding: 20px;
 
+    }
+
+    .button-div{
+        position:relative;
+        left: 85px;
+        top: 25px; 
+    }
+
+    input[type="checkbox"] {
+        vertical-align:middle;
+    }
+
+    .dis-label{
+        margin-left: 10px;
+        vertical-align: super;
     }
 }
 
