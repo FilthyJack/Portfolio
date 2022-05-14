@@ -76,8 +76,10 @@ export default {
     border-radius: 20px;
     width: 180px;
     box-shadow: 2px 5px 5px 2px;
-    background: rgb(29,253,246);
-    background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+    box-shadow: 2px 2px 5px 2px #386e86;
+    background: rgb(15,32,39);
+    background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+    border: 1px solid cornsilk;
     p {
         display: contents;
         font-size: 2em;
@@ -88,12 +90,12 @@ export default {
     }
 
     &:hover{
-        background: rgb(29,253,246);
-        background: radial-gradient(circle, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        background: rgb(15,32,39);
+        background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
     }
     &:active {
-        background: rgb(29,253,246);
-        background: linear-gradient(45deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        background: rgb(15,32,39);
+        background: linear-gradient(45deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         border-bottom-style: none;
         border-right-style: none;
     }
@@ -106,9 +108,9 @@ export default {
     padding: 2px;
     border-radius: 10px;
     width: 120px;
-    box-shadow: 2px 4px 4px 2px;
-    background: rgb(29,253,246);
-    background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+    box-shadow: 2px 2px 5px 2px #386e86;
+    background: rgb(15,32,39);
+    background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
     p {
         display: contents;
         font-size: 1.4em;
@@ -119,12 +121,12 @@ export default {
     }
 
     &:hover{
-        background: rgb(29,253,246);
-        background: radial-gradient(circle, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        background: rgb(15,32,39);
+        background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
     }
     &:active {
-        background: rgb(29,253,246);
-        background: linear-gradient(45deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        background: rgb(15,32,39);
+        background: linear-gradient(45deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         border-bottom-style: none;
         border-right-style: none;
     }

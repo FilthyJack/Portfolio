@@ -1,5 +1,5 @@
 <template>
-    <inner-wrapper>
+    <inner-wrapper :hasCloseButton="true" @close-window="closeWindow">
         <slot>
             <section ref="main" class="color-picker-main">
                 <video crossorigin="anonymous" ref="video" @play="copyVideo" id="video" width="320" height="240" controls>
@@ -18,6 +18,7 @@
 <script lang="typescript">
 import InnerWrapper from './../UI/InnerWrapper.vue';
 import ButtonComponent from './../UI/Button.vue';
+import memeToast from "meme-toast";
 
 export default {
     name: 'video-component',
@@ -39,8 +40,12 @@ export default {
             this.$data.context = this.$data.canvas.getContext('2d',{
                 colorSpace: "display-p3"
             });
+            memeToast.toast({ position: "top", message: 'Play video and move mouse over it!', duration: '10000', type: 'message' });
     },
     methods:{
+        closeWindow(){
+            this.$emit('close-picker');
+        },
         copyVideo(){
             let v = this.$data.video;
             let c = this.$data.context;
@@ -53,7 +58,7 @@ export default {
         },
 
         mouseMove(event){
-            let position = this.findPosition();
+            let position = this.$data.canvas.getBoundingClientRect();
             let x = event.pageX - position.x ;
             let y = event.pageY - position.y;
             let data = this.$data.context.getImageData(x, y, 1, 1).data;
@@ -66,20 +71,6 @@ export default {
             this.$refs.main.style.backgroundColor = hex;
         },
 
-        findPosition(){
-            let left = 0;
-            let top = 0;
-            if(this.$data.canvas.offsetParent){
-                do{
-                    //there is an issue with this, due to which current position is not being picked
-                    left += this.$data.canvas.offsetLeft;
-                    top += this.$data.canvas.offsetTop;
-                } while (this.$data.canvas == this.$data.canvas.offsetParent );
-                return {x: left, y: top};
-                
-            }
-            return {x: undefined, y: undefined};
-        },
         toHex(color){
             let v = color.toString(16);
             return v.length === 1? `0${v}`: v;

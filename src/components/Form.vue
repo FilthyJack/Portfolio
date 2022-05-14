@@ -94,8 +94,9 @@ export default {
         align-items: center;
         width: 700px;
         padding: 10px;
-                background: rgb(29,253,246);
-        background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        box-shadow: 5px 1px 23px 15px #0f2027;
+        background: rgb(15,32,39);
+        background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         .form-container {
             width: 300px;
             padding: 7px;
@@ -118,8 +119,10 @@ export default {
             padding: 5px;
             font-size: 20px;
             color: white;   
-            border:none;
-            background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+            box-shadow: 2px 2px 5px 5px #386e86;
+            background: rgb(15,32,39);
+            background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+            border: 1px solid cornsilk;
             margin: 10px 0 20px 0;
             border-radius: 20px;
             &:active{

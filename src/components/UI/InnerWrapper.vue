@@ -1,13 +1,17 @@
 <template>
 
         <div class="inner-wrapper">
+        <div class="closeButton" v-if="hasCloseButton" @click="close">
+            <WindowCloseIcon ></WindowCloseIcon>
+        </div>
+        
         <slot></slot>
         </div>
 
 </template>
 
 <script lang="typescript">
-
+import WindowCloseIcon from 'vue-material-design-icons/WindowClose.vue';
 export default {
     name: 'InnerWrapper',
     data(){
@@ -15,7 +19,14 @@ export default {
             dummy: ''
         }
     },
+    props:['hasCloseButton'],
+    components:{
+        WindowCloseIcon
+    },
     methods:{
+        close(){
+            this.$emit('close-window');
+        }
     }
 }
 </script>
@@ -31,6 +42,12 @@ export default {
     background-color: rgba(255, 255, 255, 0.75);
     position: sticky;
     bottom: 50px;
+}
+
+.closeButton{
+    position:absolute;
+    top: -10px;
+    right: 0px;
 }
 
 

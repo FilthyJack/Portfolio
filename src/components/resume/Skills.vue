@@ -55,13 +55,13 @@ export default {
         width: 80%;
     }
     .filled[data-rating="good"] {
-        width: 90%;
+        width: 85%;
     }
     .filled[data-rating="great"] {
         width: 90%;
     }
     .filled[data-rating="excellent"] {
-        width: 90%;
+        width: 95%;
     }
     .skill-name{
         display: inline-block;

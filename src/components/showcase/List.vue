@@ -1,6 +1,6 @@
 <template>
 
-<InnerWrapper>
+<InnerWrapper :hasCloseButton="true" @close-window="closeWindow">
 	<div v-if="!showError" class="list-container">
         <div v-for="(movie,index) in movieArray" :key="index">
             <ListItem
@@ -98,6 +98,9 @@ export default {
         
     },
     methods:{
+        closeWindow(){
+            this.$emit('close-list');
+        }
     },
     computed:{
         

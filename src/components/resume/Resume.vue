@@ -29,6 +29,10 @@
               <div class="resume-left-heading">
                   <p>EDUCATION</p>
               </div>
+              <Skills
+                :skills="[{name: 'Javascript',rating: 'great'}, {name: 'Javascript',rating: 'great'}]"
+              >
+              </Skills>
           </div>
       </section>
       <section class="resume-footer"></section>
@@ -36,13 +40,13 @@
 </template>
 
 <script>
-// import Skills from './Skills.vue';
+import Skills from './Skills.vue';
 import resumeData from './../../assets/resume/resume.json';
 
 export default {
     name: 'resume-component',
     components: {
-        
+        Skills
     },
     data() {
         return {
@@ -67,8 +71,9 @@ export default {
         border-radius: 14px;
         align-items: center;
         margin-top: 5px;
-        background: rgb(29,253,246);
-        background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+        box-shadow: 5px 1px 23px 15px #0f2027;
+        background: rgb(15,32,39);
+        background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         .resume-header{
             display: flex;
             flex-direction: column;

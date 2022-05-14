@@ -5,14 +5,14 @@
                 <p>color Picker</p>
             </div>
             <div @click="selectList" class="item-container">
-                <p>List Picker</p>
+                <p>Infinite List</p>
             </div>
         </div>
         <div class="colorpicker" v-if="showColor">
-            <color-pick></color-pick>
+            <color-pick @close-picker="selectColor"></color-pick>
         </div>
         <div class="colorpicker" v-if="showList">
-            <List></List>
+            <List @close-list="selectList"></List>
         </div>
     </section>
 </template>
@@ -34,10 +34,10 @@ export default {
     },
     methods:{
         selectColor(){
-            this.$data.showColor = true;
+            this.$data.showColor = !this.$data.showColor;
         },
         selectList(){
-            this.$data.showList = true;
+            this.$data.showList = !this.$data.showList;
         }
 
     }

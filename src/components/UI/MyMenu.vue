@@ -72,7 +72,8 @@ export default {
   width: 5.5em;
   height: 5.5em;
   border-radius: 50%;
-   background: linear-gradient(90deg, rgba(29,253,246,1) 4%, rgba(58,77,180,1) 55%, rgba(252,237,69,1) 97%);
+  background: rgb(15,32,39);
+  background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
   color: hsl(0, 0%, 100%);
   text-align: center;
@@ -108,7 +109,8 @@ export default {
   top: 0;
   right: 0;
   z-index: -2;
-  background-color: hsl(4, 98%, 60%);
+  background: rgb(15,32,39);
+  background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
   transition: all .3s ease;
 }
 
