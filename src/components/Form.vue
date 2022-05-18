@@ -8,15 +8,15 @@
                     </label>
                     <br />
                 <label for="phone">Your Phone Number?
-                    <input type="text" id="phone">
+                    <input type="text" id="phone" v-model="phone">
                 </label>
                 <br>
                 <label for="email">Maybe your email too ?
-                    <input type="text" id="email">
+                    <input type="text" id="email" v-model="email">
                 </label>
                 <br>
                 <label for="comments">Anything you wanna jot down real quick ?
-                    <textarea rows="4" type="textfield" id="comments"></textarea>
+                    <textarea rows="4" type="textfield" id="comments" v-model="comments"></textarea>
                 </label>
                 <br />
                 <input v-model="disclaimer" type="checkbox" id="disclaimer" name="disclaimer" value="disclaimer" required>
@@ -29,43 +29,32 @@
                 </div>
                       
             </form>
-            <div v-if="isToastVisible" class="toast">
-                <p class="toast-text">
-                    Welcome back! {{visitorName}}
-                </p>
-            </div>
         </div>
 </template>
 
 <script>
 import Button from './UI/Button.vue';
+import db from './../firebaseInit.js';
+import { addDoc, collection } from "firebase/firestore";
+import memeToast from "meme-toast";
+
 export default {
     name: 'form-component',
     components: {
         Button
     },
     mounted() {
-        const visitorName = localStorage.getItem('visitor');
-        if (visitorName && visitorName.length !== 0) {
-            this.$data.visitorName = visitorName;
-            this.$data.showToast = true;
-            setTimeout(()=>{
-                this.$data.showToast = false;
-            }, 5000);
-        }
     },
     data() {
         return {
-            visitorName: '',
-            showToast: false,
+            disclaimer: false,
             name: '',
-            disclaimer: false
+            email: '',
+            phone: '',
+            comments: ''
         }
     },
     computed: {
-        isToastVisible(){
-            return this.$data.showToast;
-        },
         isDisabled(){
             if (this.$data.name !== '' && this.$data.disclaimer === true) {
                 return false;
@@ -76,8 +65,34 @@ export default {
     },
     methods:{
         sendResponse() {
-            console.log(this.$data.name);
-            //code to send response thorugh api
+            const displayName = localStorage.getItem('displayName');
+            if(!displayName){
+                const displayName = this.$data.name.split(' ')[0];
+                localStorage.setItem('displayName', displayName);
+            }
+            const dataObject = {
+                name: this.$data.name,
+                email: this.$data.email.length !== 0? this.$data.email: '',
+                phone: this.$data.phone.length !== 0? this.$data.phone: '',
+                comments: this.$data.comments.length !== 0? this.$data.comments: '',
+            };
+            addDoc(collection(db, "visitors"), dataObject).
+            then(() => {
+                memeToast.toast({
+                    position: "top",
+                    message: 'Thanks for the note!',
+                    duration: '5000',
+                    type: 'success'
+                });
+            }).
+            catch(() => {
+                memeToast.toast({
+                    position: "bottom",
+                    message: 'Something went wrong, Sorry!!',
+                    duration: '5000',
+                    type: 'danger'
+                });
+            });
         }
     }
 }

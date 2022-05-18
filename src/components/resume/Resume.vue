@@ -119,13 +119,18 @@ export default {
 
 <style lang="scss" scoped>
 .resume-main-container {
+    color: #fff8dc;
+    background: black;
+    .resume-left{
+        background-color: rgb(20 20 21);
+    }
     @media(min-width: 500px) {
-        color: #fff8dc;
+        
         position: relative;
         width: 700px;
         height: 850px;
         box-shadow: -35px 150px 120px 21px black;
-        background: black;
+        
         margin-bottom: 50px;
         
         .resume-left{
@@ -135,7 +140,7 @@ export default {
             margin-left: 35px;
             width: 45%;
             height: 85%;
-            background-color: rgb(20 20 21);
+            
             text-align: left;
             padding-right: 5px;
             border-top-left-radius: 50px;
@@ -324,6 +329,99 @@ export default {
                 img{
                     border: 2px solid white;
                     width: 50px;
+                }
+            }
+            h2{
+                filter: brightness(1.35);
+            }
+        }
+    }
+    @media(max-width:500px){
+        position: relative;
+        width: 450px;
+        height: 700px;
+        box-shadow: -10px 50px 40px 7px black;
+        
+        margin-bottom: 50px;
+        
+        .resume-left{
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            margin-left: 10px;
+            width: 45%;
+            height: 85%;
+            
+            text-align: left;
+            padding-right: 2px;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+           .header{
+               margin-left: 15px;
+               h2{
+                    font-size: 25px;
+                    margin-top: 15px;
+                    margin-bottom: 9px;
+                    line-height: 20px;
+                }
+                h3{
+                    display: inline;
+                    font-size: 15px;
+                    margin: 0px;
+                    margin-top: 10px;
+                    letter-spacing: 1px;
+                    background-color: #192e77;
+                    padding: 2px 6px 2px 6px;
+
+                }
+                p{
+                    margin-top:12px;
+                    font-weight: 400;
+                    line-height: 13px;
+                    color: #fff8dc;
+                }
+           }
+
+           .contacts{
+               margin-left: 15px;
+               margin-top: 20px;
+               & > div{
+                   margin-top: 10px;
+                   margin-bottom: 0px;
+               }
+               p:first-child{
+                   color: #192e77;
+                   font-size: 16px;
+                   letter-spacing: 1px;
+                   margin-top: 0px;
+                   filter: brightness(1.35);
+               }
+               p{
+                   font-size: 15px;
+                   font-weight: 600;
+                   margin: 0px;
+                   margin-top: -5px;
+                    color: #fff8dc;
+               }
+            }
+            .skills {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: 40px;
+                justify-content: space-evenly;
+                align-items: center;
+                .r1{
+                    display: flex;
+                    align-items: center;
+                }
+                .r2{
+                    display: flex;
+                    align-items: center;
+                }
+                h3{
+                    font-size: 25px;
+                    margin-bottom: 5px;
                 }
             }
             h2{

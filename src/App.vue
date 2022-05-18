@@ -8,13 +8,27 @@
 import memeToast from "meme-toast";
 import BaseWrapper from "./components/BaseWrapper.vue";
 
+
+
 export default {
 	name: "App",
 	components: {
 		BaseWrapper,
 	},
 	mounted() {
-		memeToast.toast({ position: "bottom", message: 'Testing the toast', duration: '8000', type: 'success' });
+		let displayName = localStorage.getItem('displayName');
+		let message = 'Hi there stranger!';
+		if(displayName && displayName.length > 0){
+			const name = displayName.split(' ')[0];
+			message = `Thanks for coming back ${name}!`;
+		}
+		memeToast.toast({
+            position: "bottom",
+            message: message,
+            duration: '5000',
+            type: 'message'
+        });
+		
 	},
 };
 </script>
