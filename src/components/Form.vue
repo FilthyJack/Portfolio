@@ -86,17 +86,18 @@ export default {
 <style lang="scss" scoped>
 .form-main-container {
     @media(min-width: 500px) {
+        .form-title{
+            font-size: 25px;
+        }
         .form-subtitle{
             display: contents;
+            font-size: 18px;
         }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
         width: 700px;
         padding: 10px;
-        box-shadow: 5px 1px 23px 15px #0f2027;
-        background: rgb(15,32,39);
-        background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+        box-shadow: 5px 40px 20px 15px black;
+        
         .form-container {
             width: 300px;
             padding: 7px;
@@ -106,11 +107,9 @@ export default {
                 align-self: end;
             }
         }
-        h3,p, label{
-            color: white;
-        }
+        
         label{
-            font-size: 14px;
+            font-size: 16px;
             margin-top: 15px;
         }
         input, textarea{
@@ -119,9 +118,8 @@ export default {
             padding: 5px;
             font-size: 20px;
             color: white;   
-            box-shadow: 2px 2px 5px 5px #386e86;
-            background: rgb(15,32,39);
-            background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+            box-shadow: 2px 2px 5px 5px #192e77;
+            background: black;
             border: 1px solid cornsilk;
             margin: 10px 0 20px 0;
             border-radius: 20px;
@@ -147,7 +145,7 @@ export default {
                 border-bottom: none;
             }
             &:checked {
-                background: forestgreen; 
+                background: #192e77; 
                  border: 3px outset cyan;             
             }
         }
@@ -176,9 +174,17 @@ export default {
         margin-left: 10px;
         vertical-align: super;
     }
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3,p, label{
+            color: white;
+    }
 }
 
 .imp {
     color: red;
 }
+
 </style>

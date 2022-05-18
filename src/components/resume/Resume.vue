@@ -1,52 +1,108 @@
 <template>
   <section class="resume-main-container">
-      <section class="resume-header">
-          <div class="subheader resume-name">
-              <p class="name-text">{{name.toUpperCase()}}</p>
-          </div>
-          <div class="subheader resume-title">
-              <p class="title-text">{{title.toUpperCase()}}</p>
-          </div>
-          <div class="subheader resume-photo">
-              <img src="" alt="" class="photo">
-          </div>
-      </section>
-      <section class="resume-body">
-          <div class="resume-left">
-              <div class="resume-left-heading">
-                  <p>EXPERIENCE</p>
-              </div>
-              <div v-for="item in experience" :key="item.company" class="resume-left-item">
-                  <p class="company-name">{{item.company}}</p>
-                  <div v-for="role in item.roles" :key="role.role" class="roles">
-                      <p>{{role.role}}</p>
-                      <p>{{role.duration}}</p>
-                      <p>{{role.stack[0] +  role.stack[1]}}</p>
-                  </div>
-              </div>
-          </div>
-          <div class="resume-right">
-              <div class="resume-left-heading">
-                  <p>EDUCATION</p>
-              </div>
-              <Skills
-                :skills="[{name: 'Javascript',rating: 'great'}, {name: 'Javascript',rating: 'great'}]"
-              >
-              </Skills>
-          </div>
-      </section>
-      <section class="resume-footer"></section>
+<!-- ========================resume-left============================================ -->
+      <div class="resume-left">
+        
+        <div class="header">
+            <h2><span>ASHIM</span><br /><span>KHAN</span></h2>
+            <h3>FRONTEND DEVELOPER</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                as opposed to using 'Content here,.
+            </p>
+        </div>
+
+        <div class="contacts">
+            <div class="email">
+                <p>Email</p>
+                <p>ashim07@zohomail.in</p>
+            </div>
+            <div class="linkedin">
+                <p>LinkedIn</p>
+                <p>www.linkedin.com/in/ashim-khan</p>
+            </div>
+            <div class="hashnode">
+                <p>Blog</p>
+                <p>callbackconundrum.hashnode.dev</p>
+            </div>
+            <div class="npm">
+                <p>NPM</p>
+                <p>www.npmjs.com/package/meme-toast</p>
+            </div>
+        </div>
+
+        <div class="skills">
+            <h3>SkillSet</h3>
+            <div class="r1">
+                <div class="icon-holder">
+                <img class="js" src="@/assets/js.png" alt="resume-photo" />
+                </div>
+                <div class="icon-holder">
+                    <img src="@/assets/vue1.png" alt="resume-photo" />
+                </div>
+                <div class="icon-holder">
+                    <img src="@/assets/react.png" alt="resume-photo" />
+                </div>
+                <div class="icon-holder">
+                    <img src="@/assets/ts.png" alt="resume-photo" />
+                </div>
+            </div>
+            <div class="r2">
+                <div class="icon-holder">
+                    <img src="@/assets/jest.png" alt="resume-photo" />
+                </div>
+                <div class="icon-holder">
+                    <img src="@/assets/css.png" alt="resume-photo" />
+                </div>
+            </div>
+          
+        </div>
+
+      </div>
+<!-- ========================resume-left============================================ -->
+
+
+
+
+      <div class="resume-right">
+        <div class="resume-photo">
+            <img src="@/assets/potrait1.jpg" alt="resume-photo" />
+        </div>
+        <div class="resume-content">
+            <h1 class="education-title">EDUCATION</h1>
+            <div class="resume-education">
+                <div class="dot"></div>
+                <h2>Bachelor of Technology</h2>
+                <h3>2015 - 2019</h3>
+                <p>NIT Raipur</p>
+            </div>
+
+            <h1 class="experience-title">EXPERIENCE</h1>
+            <div class="resume-experience">
+                <div class="dot1"></div>
+                <h2>Frontend Developer</h2>
+                <h3>2021 - Present  /  Enterprise Minds</h3>
+                <p>Developed and delivered a full-scale Help-center for a major Bank.
+                    Owned TDD for the application. End to End UI development with Vue(2)</p>
+                <div class="dot2"></div>
+                <h2 class="ds">R&D Development Specialist</h2>
+                <h3>2019 - 2021  /  Dassault Systemes</h3>
+                <p>Developed a Geological Modelling Application in a 5-member team.
+                    Rebuilt UI with React 15 and Typescript & Integrated Unit Testing with Jasmine</p>
+                
+            </div>
+        </div>
+      </div>
+      
   </section>
 </template>
 
 <script>
-import Skills from './Skills.vue';
 import resumeData from './../../assets/resume/resume.json';
 
 export default {
     name: 'resume-component',
     components: {
-        Skills
     },
     data() {
         return {
@@ -64,73 +120,233 @@ export default {
 <style lang="scss" scoped>
 .resume-main-container {
     @media(min-width: 500px) {
-        display: flex;
-        color: cornsilk;
-        flex-direction: column;
-        border: 3px solid cornsilk;
-        border-radius: 14px;
-        align-items: center;
-        margin-top: 5px;
-        box-shadow: 5px 1px 23px 15px #0f2027;
-        background: rgb(15,32,39);
-        background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
-        .resume-header{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 10px;
-            .resume-name{
-                border: 5px double;
-                font-size: 35px;
-                font-weight: 900;
-                padding: 12px 50px 12px 50px;
-                height: 40px;
-                p{
-                    display: inline;
+        color: #fff8dc;
+        position: relative;
+        width: 700px;
+        height: 850px;
+        box-shadow: -35px 150px 120px 21px black;
+        background: black;
+        margin-bottom: 50px;
+        
+        .resume-left{
+            position: absolute;
+            left: 0px;
+            top: 120px;
+            margin-left: 35px;
+            width: 45%;
+            height: 85%;
+            background-color: rgb(20 20 21);
+            text-align: left;
+            padding-right: 5px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 60px;
+           .header{
+               margin-left: 50px;
+               h2{
+                    font-size: 45px;
+                    margin-top: 25px;
+                    margin-bottom: 20px;
+                    line-height: 35px;
                 }
-            }
-            .resume-title{
-                font-size: 17px;
-                font-weight: 500;
-                height: 30px;
-                margin-top: 15px;
-                p{
+                h3{
                     display: inline;
-                }
-            }
-            .resume-photo{
-                width: 130px;
-                height: 125px;
-                border-radius: 65px;
-                background-color: blue;
-                margin-top: 15px;
-            }
-        }
+                    font-size: 18px;
+                    margin: 0px;
+                    margin-top: 10px;
+                    letter-spacing: 1px;
+                    background-color: #192e77;
+                    padding: 2px 10px 2px 10px;
 
-        .resume-body{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 29px;
-            .resume-left{
-                border-right: 5px solid ;
-                width: 400px;
-                padding-right: 30px;
+                }
+                p{
+                    margin-top:20px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    color: #fff8dc;
+                }
+           }
+
+           .contacts{
+               margin-left: 50px;
+               margin-top: 40px;
+               & > div{
+                   margin-top: 10px;
+                   margin-bottom: 0px;
+               }
+               p:first-child{
+                   color: #192e77;
+                   font-size: 21px;
+                   letter-spacing: 1px;
+                   margin-top: 0px;
+                   filter: brightness(1.35);
+               }
+               p{
+                   font-size: 18px;
+                   font-weight: 600;
+                   margin: 0px;
+                   margin-top: -5px;
+                    color: #fff8dc;
+               }
+            }
+            .skills {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
+                width: 80%;
+                margin-left: 40px;
+                justify-content: space-evenly;
+                align-items: center;
+                .r1{
+                    display: flex;
+                    align-items: center;
+                }
+                .r2{
+                    display: flex;
+                    align-items: center;
+                }
+                h3{
+                    font-size: 25px;
+                    margin-bottom: 5px;
+                }
             }
-            .resume-right{
-                border-left: 5px solid ;
-                height: 300px;
-                width: 400px;
-            }
-            .resume-left-item{
-                
+            h2{
+                filter: brightness(1.35);
             }
         }
-        
+        .resume-right{
+            position: absolute;
+            right: 0px;
+            margin-top: 10px;
+            width: 55%;
+            height: 90%;
+            .resume-photo{
+                width: 95%;
+                margin-left: 20px;
+                
+                img{
+                    width: 75%;
+                    height: 300px;
+                    border-top-left-radius: 50px;
+                    border-bottom-right-radius: 60px;
+                }
+            }
+            .resume-content{
+                margin-left: 68px;
+                text-align: left;
+                h1{
+                    margin-left: 15px;
+                }
+                .education-title, .experience-title{
+                    letter-spacing: 1px;
+                    font-size: 25px;
+                    margin: 0;
+                    margin-top: 20px;
+                    margin-left: -5px;
+                }
+            }
+            .resume-education{
+                position: relative;
+                width: 90%;
+                border-left: 4px solid rgb(20 20 21);
+                margin-top: 20px;
+                text-align: left;
+                .dot{
+                    position: absolute;
+                    width: 15px;
+                    top: -2px;
+                    left: -11px;
+                    border: 1px solid #192e77;
+                    height: 15px;
+                    border-radius: 10px;
+                    background-color: #192e77;
+                }
+                h2{
+                    color: #192e77;
+                    position: relative;
+                    top: -10px;
+                    letter-spacing: 1px;
+                }
+                h2,h3,p{
+                    margin: 0;
+                    margin-left: 15px;
+                }
+                h3{
+                    margin-top: -10px;
+                }
+            }
+
+            .resume-experience{
+                position: relative;
+                width: 90%;
+                border-left: 4px solid rgb(20 20 21);
+                margin-top: 20px;
+                text-align: left;
+                .dot1{
+                    position: absolute;
+                    width: 15px;
+                    top: -2px;
+                    left: -11px;
+                    border: 1px solid #192e77;
+                    height: 15px;
+                    border-radius: 10px;
+                    background-color: #192e77;
+                }
+                .dot2{
+                    position: absolute;
+                    width: 15px;
+                    top: 130px;
+                    left: -11px;
+                    border: 1px solid #192e77;
+                    height: 15px;
+                    border-radius: 10px;
+                    background-color: #192e77;
+                }
+                h2{
+                    color: #192e77;
+                    position: relative;
+                    top: -10px;
+                    letter-spacing: 1px;
+                }
+                h2,h3,p{
+                    margin: 0;
+                    margin-left: 15px;
+                }
+                h3{
+                    margin-top: -10px;
+                }
+                p{
+                    font-weight: 400;
+                    line-height: 16px;
+                }
+                .ds{
+                    letter-spacing: 0px;
+                    margin-top: 19px;
+                }
+                img{
+                    border: 2px solid white;
+                    width: 50px;
+                }
+            }
+            h2{
+                filter: brightness(1.35);
+            }
+        }
+    }
+}
+
+.icon-holder {
+    margin: 5px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px double white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 30px;
+    }
+    .js{
+        width: 35px;
     }
 }
 </style>

@@ -1,5 +1,9 @@
 body {
-    background-color: whitesmoke;
+    background-color: rgba(52,83,189,255);
+    display: flex;
+    justify-content: center;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Darker Grotesque', sans-serif !important;
 }
 
 .color-pick-active {

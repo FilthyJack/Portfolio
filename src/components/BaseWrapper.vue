@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="base-wrapper">
+        
         <component :is="activeComp"></component>
-        </div>
+        
         <MyMenu @select-item="selectItemHandler"></MyMenu>
     </section>
 </template>

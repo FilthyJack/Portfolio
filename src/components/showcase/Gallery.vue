@@ -21,17 +21,17 @@ export default {
         return {
             images: [
                 {
-                    src: require("../../assets/logo.png"),
+                    src: require("../../assets/vue1.png"),
                     alt: 'logo',
                     id: 1
                 },
                 {
-                    src: require("../../assets/logo.png"),
+                    src: require("../../assets/vue1.png"),
                     alt: 'logo',
                     id: 2
                 },
                 {
-                    src: require("../../assets/logo.png"),
+                    src: require("../../assets/vue1.png"),
                     alt: 'logo',
                     id: 3
                 }
