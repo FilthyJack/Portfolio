@@ -76,9 +76,9 @@ export default {
     border-radius: 20px;
     width: 180px;
     box-shadow: 2px 5px 5px 2px;
-    box-shadow: 2px 2px 5px 2px #386e86;
-    background: rgb(15,32,39);
-    background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+    box-shadow: 2px 2px 5px 2px rgba(52,83,189,1);
+    background: rgb(0,0,0);
+    background: linear-gradient(324deg, rgba(0,0,0,1) 27%, rgba(52,83,189,1) 84%);
     border: 1px solid cornsilk;
     p {
         display: contents;
@@ -87,15 +87,14 @@ export default {
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;
+        font-weight: 600;
     }
 
     &:hover{
-        background: rgb(15,32,39);
-        background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 27%, rgba(52,83,189,1) 84%);
     }
     &:active {
-        background: rgb(15,32,39);
-        background: linear-gradient(45deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         border-bottom-style: none;
         border-right-style: none;
     }
@@ -108,9 +107,9 @@ export default {
     padding: 2px;
     border-radius: 10px;
     width: 120px;
-    box-shadow: 2px 2px 5px 2px #386e86;
-    background: rgb(15,32,39);
-    background: linear-gradient(135deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+    box-shadow: 2px 2px 5px 2px rgba(52,83,189,1);
+    background: rgb(0,0,0);
+    background: linear-gradient(324deg, rgba(0,0,0,1) 27%, rgba(52,83,189,1) 84%);
     p {
         display: contents;
         font-size: 1.4em;
@@ -118,15 +117,14 @@ export default {
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;
+        font-weight: 600;
     }
 
     &:hover{
-        background: rgb(15,32,39);
-        background: radial-gradient(circle, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 27%, rgba(52,83,189,1) 84%);
     }
     &:active {
-        background: rgb(15,32,39);
-        background: linear-gradient(45deg, rgba(15,32,39,1) 0%, rgba(41,77,89,1) 57%, rgba(56,110,134,1) 81%);
         border-bottom-style: none;
         border-right-style: none;
     }

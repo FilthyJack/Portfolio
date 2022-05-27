@@ -166,6 +166,72 @@ export default {
         }
     }
 
+    @media(max-width: 500px) {
+        .form-title{
+            font-size: 25px;
+        }
+        .form-subtitle{
+            display: contents;
+            font-size: 18px;
+        }
+        
+        width: 300px;
+        padding: 10px;
+        box-shadow: -5px 55px 30px 10px black;
+        
+        .form-container {
+            width: 280px;
+            padding: 7px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            &:nth-child(even) {
+                align-self: end;
+            }
+        }
+        
+        label{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        input, textarea{
+            -webkit-appearance: none;
+            outline: none;
+            padding: 5px;
+            font-size: 18px;
+            color: white;   
+            box-shadow: 2px 2px 5px 5px #192e77;
+            background: black;
+            border: 1px solid cornsilk;
+            margin: 10px 0 20px 0;
+            border-radius: 20px;
+            &:active{
+                border-bottom: 3px outset cyan;
+            }
+            &:focus{
+                border-bottom: 3px outset cyan;
+            }
+        }
+        textarea{
+            font-size: 14px;
+            width: 215px;
+        }
+        #disclaimer{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            &:active{
+                border-bottom: none;
+            }
+            &:focus{
+                border-bottom: none;
+            }
+            &:checked {
+                background: #192e77; 
+                 border: 3px outset cyan;             
+            }
+        }
+    }
+
     .toast {
         position: absolute;
         top:100px;
