@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
 	
 	
@@ -42,5 +42,8 @@ export default {
 	text-align: center;
 	color: black;
 	margin-top: 60px;
+	@media(max-width: 500px){
+		margin-top:20px;
+	}
 }
 </style>

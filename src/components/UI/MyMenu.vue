@@ -13,9 +13,7 @@
                 <a href="#" @click="handleClick('Showcase')" :class="activeOption === 'Showcase'? 'activeoption menu-item': 'menu-item'">
                     <FileCodeOutlineIcon :size="35" title="Explore Showcase">
                 </FileCodeOutlineIcon></a>
-                <a href="#" @click="handleClick('Blogs')" :class="activeOption === 'Blogs'? 'activeoption menu-item': 'menu-item'">
-                    <post-icon :size="35" title="Read Blogs"></post-icon>
-                </a>
+                
                 <a href="#" @click="handleClick('Form')" :class="activeOption === 'Form'? 'activeoption menu-item': 'menu-item'">
                     <notebook-edit-icon :size="35" title="Leave a Note!"></notebook-edit-icon>
                 </a>
@@ -29,7 +27,6 @@
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import FileAccountIcon from 'vue-material-design-icons/FileAccount.vue';
 import FileCodeOutlineIcon from 'vue-material-design-icons/FileCodeOutline.vue';
-import PostIcon from 'vue-material-design-icons/Post.vue';
 import NotebookEditIcon from 'vue-material-design-icons/NotebookEdit.vue';
 
 
@@ -40,7 +37,6 @@ export default {
         MenuIcon,
         FileAccountIcon,
         FileCodeOutlineIcon,
-        PostIcon,
         NotebookEditIcon
     },
     data(){

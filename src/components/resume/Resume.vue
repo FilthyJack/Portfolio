@@ -6,9 +6,9 @@
         <div class="header">
             <h2><span>ASHIM</span><br /><span>KHAN</span></h2>
             <h3>FRONTEND DEVELOPER</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                as opposed to using 'Content here,.
+            <p>Meticulous Frontend Developer with 3 years of experience in Web development
+                and SPAs, with a solid grasp of Javascript Fundamentals. Revamped a
+                Legacy UI with React and delivered a Vue Web-App for a major Indian Bank.
             </p>
         </div>
 
@@ -64,7 +64,7 @@
 
 
 
-      <div class="resume-right">
+      <div v-if="!isMobile()" class="resume-right">
         <div class="resume-photo">
             <img src="@/assets/potrait1.jpg" alt="resume-photo" />
         </div>
@@ -93,16 +93,26 @@
             </div>
         </div>
       </div>
+
+      <div v-if="isMobile()" class="resume-download resume-tooltip">
+      <a href="https://drive.google.com/file/d/1pS-9pDRne94EY4imqanPmafJeDeewCwB/view?usp=sharing" target="_blank">
+      <file-download-icon :size="48" title="Click to download Resume">
+        </file-download-icon>
+      </a>
+        
+      </div>
       
   </section>
 </template>
 
 <script>
 import resumeData from './../../assets/resume/resume.json';
+import FileDownloadIcon from 'vue-material-design-icons/FileDownload.vue';
 
 export default {
     name: 'resume-component',
     components: {
+        FileDownloadIcon
     },
     data() {
         return {
@@ -112,6 +122,15 @@ export default {
             skillArray: resumeData.skills,
             experience: resumeData.experience
 
+        }
+    },
+    methods: {
+        isMobile() {
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
@@ -335,10 +354,26 @@ export default {
                 filter: brightness(1.35);
             }
         }
+        .icon-holder {
+            margin: 5px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 3px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 30px;
+            }
+            .js{
+                width: 35px;
+            }
+        }
     }
     @media(max-width:500px){
         position: relative;
-        width: 450px;
+        width: 340px;
         height: 700px;
         box-shadow: -10px 50px 40px 7px black;
         
@@ -346,10 +381,10 @@ export default {
         
         .resume-left{
             position: absolute;
-            left: 0px;
+            left: 40px;
             top: 40px;
             margin-left: 10px;
-            width: 45%;
+            width: 70%;
             height: 85%;
             
             text-align: left;
@@ -408,7 +443,7 @@ export default {
                 display: flex;
                 flex-direction: column;
                 width: 80%;
-                margin-left: 40px;
+                margin-left:25px;
                 justify-content: space-evenly;
                 align-items: center;
                 .r1{
@@ -428,23 +463,45 @@ export default {
                 filter: brightness(1.35);
             }
         }
+        .icon-holder {
+            margin: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 25px;
+            }
+            .js{
+                width: 30px;
+            }
+        }
     }
-}
 
-.icon-holder {
-    margin: 5px;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    border: 2px double white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img{
-        width: 30px;
+    .resume-download{
+        width: 5.5em;
+        height: 5.5em;
+        border-radius: 50%;
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(8,9,68,1) 53%, rgba(84,164,199,1) 91%);
+        box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
+        color: hsl(0, 0%, 100%);
+        text-align: center;
+        line-height: 3.9;
+        cursor: pointer;
+        outline: 0;
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        a{
+            color: inherit;
+        }
     }
-    .js{
-        width: 35px;
+
+    .resume-tooltip{
     }
 }
 </style>
