@@ -6,9 +6,10 @@
         <div class="header">
             <h2><span>ASHIM</span><br /><span>KHAN</span></h2>
             <h3>FRONTEND DEVELOPER</h3>
-            <p>Meticulous Frontend Developer with 3 years of experience in Web development
+            <p>Meticulous Frontend Developer with 3+ years of experience in Web development
                 and SPAs, with a solid grasp of Javascript Fundamentals. Revamped a
-                Legacy UI with React and delivered a Vue Web-App for a major Indian Bank.
+                Legacy UI with React, delivered a Vue Web-App for a major Indian Bank and worked 
+                extensively in planning and development of modules for SaaS Platform.
             </p>
         </div>
 
@@ -80,11 +81,18 @@
             <h1 class="experience-title">EXPERIENCE</h1>
             <div class="resume-experience">
                 <div class="dot1"></div>
-                <h2>Frontend Developer</h2>
-                <h3>2021 - Present  /  Enterprise Minds</h3>
+                <h2>Engineer(Frontend)</h2>
+                <h3>2021 - Present  /  Nimbly Technologies</h3>
+                <p>Owned planning and development for the L&D module of the SaaS platform, using
+                    React and RTK and React Native.</p>
+
+                <div class="dot2"></div>
+                <h2 class="ds">Frontend Developer</h2>
+                <h3>2021 - July 2022  /  Enterprise Minds</h3>
                 <p>Developed and delivered a full-scale Help-center for a major Bank.
                     Owned TDD for the application. End to End UI development with Vue(2)</p>
-                <div class="dot2"></div>
+
+                <div class="dot3"></div>
                 <h2 class="ds">R&D Development Specialist</h2>
                 <h3>2019 - 2021  /  Dassault Systemes</h3>
                 <p>Developed a Geological Modelling Application in a 5-member team.
@@ -147,7 +155,7 @@ export default {
         
         position: relative;
         width: 700px;
-        height: 850px;
+        height: 890px;
         box-shadow: -35px 150px 120px 21px black;
         
         margin-bottom: 50px;
@@ -263,7 +271,7 @@ export default {
                     letter-spacing: 1px;
                     font-size: 25px;
                     margin: 0;
-                    margin-top: 20px;
+                    margin-top: 15px;
                     margin-left: -5px;
                 }
             }
@@ -317,7 +325,17 @@ export default {
                 .dot2{
                     position: absolute;
                     width: 15px;
-                    top: 130px;
+                    top: 120px;
+                    left: -11px;
+                    border: 1px solid #192e77;
+                    height: 15px;
+                    border-radius: 10px;
+                    background-color: #192e77;
+                }
+                .dot3{
+                    position: absolute;
+                    width: 15px;
+                    top: 250px;
                     left: -11px;
                     border: 1px solid #192e77;
                     height: 15px;

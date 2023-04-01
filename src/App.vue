@@ -41,7 +41,7 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: black;
-	margin-top: 60px;
+	margin-top: 30px;
 	@media(max-width: 500px){
 		margin-top:20px;
 	}
