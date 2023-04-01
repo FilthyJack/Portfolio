@@ -82,19 +82,19 @@
             <div class="resume-experience">
                 <div class="dot1"></div>
                 <h2>Engineer(Frontend)</h2>
-                <h3>Aug 2022 - Present  /  Nimbly Technologies</h3>
+                <h3>Aug 2022 - Present / Nimbly Tech</h3>
                 <p>Owned planning and development for the L&D module of the SaaS platform, using
                     React and RTK and React Native.</p>
 
                 <div class="dot2"></div>
                 <h2 class="ds">Frontend Developer</h2>
-                <h3>2021 - July 2022  /  Enterprise Minds</h3>
+                <h3>2021 - July 2022 / Enterprise Minds</h3>
                 <p>Developed and delivered a full-scale Help-center for a major Bank.
                     Owned TDD for the application. End to End UI development with Vue(2)</p>
 
                 <div class="dot3"></div>
                 <h2 class="ds">R&D Development Specialist</h2>
-                <h3>2019 - 2021  /  Dassault Systemes</h3>
+                <h3>2019 - 2021 / Dassault Systemes</h3>
                 <p>Developed a Geological Modelling Application in a 5-member team.
                     Rebuilt UI with React 15 and Typescript & Integrated Unit Testing with Jasmine</p>
                 
