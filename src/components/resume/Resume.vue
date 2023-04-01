@@ -82,7 +82,7 @@
             <div class="resume-experience">
                 <div class="dot1"></div>
                 <h2>Engineer(Frontend)</h2>
-                <h3>2021 - Present  /  Nimbly Technologies</h3>
+                <h3>Aug 2022 - Present  /  Nimbly Technologies</h3>
                 <p>Owned planning and development for the L&D module of the SaaS platform, using
                     React and RTK and React Native.</p>
 
