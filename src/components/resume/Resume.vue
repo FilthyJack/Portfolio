@@ -16,7 +16,7 @@
         <div class="contacts">
             <div class="email">
                 <p>Email</p>
-                <p>ashim07@zohomail.in</p>
+                <p>khanashim976@gmail.com</p>
             </div>
             <div class="linkedin">
                 <p>LinkedIn</p>
@@ -103,7 +103,7 @@
       </div>
 
       <div v-if="isMobile()" class="resume-download resume-tooltip">
-      <a href="https://drive.google.com/file/d/1fRbFEUQR2-J0FLXr2STOlIkhX6cbjV8S/view?usp=sharing" target="_blank">
+      <a href="https://drive.google.com/file/d/1Axtfrm2_6xC7qyINvhGjMZAKtYEqIIRA/view?usp=sharing" target="_blank">
       <file-download-icon :size="48" title="Click to download Resume">
         </file-download-icon>
       </a>
