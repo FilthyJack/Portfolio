@@ -103,7 +103,7 @@
       </div>
 
       <div v-if="isMobile()" class="resume-download resume-tooltip">
-      <a href="https://drive.google.com/file/d/1GFFU4o_X7dlSEgvMw29AWaulojFtSA94/view?usp=sharing" target="_blank">
+      <a href="https://drive.google.com/file/d/1fRbFEUQR2-J0FLXr2STOlIkhX6cbjV8S/view?usp=sharing" target="_blank">
       <file-download-icon :size="48" title="Click to download Resume">
         </file-download-icon>
       </a>
